@@ -1,0 +1,62 @@
+
+================================================================================
+신장암 치료 효과 예측 모델 분석 보고서 (CDSS 호환 + XAI + 과적합 방지)
+================================================================================
+
+📊 데이터 개요:
+- 총 환자 수: 288명
+- 사망 환자: 44명
+- 사망률: 15.3%
+- 중간 추적 기간: 768일
+- 치료효과 양호: 145명
+
+🎯 모델 성능 요약:
+
+RSF:
+  - Train: C-index = 0.881
+  - Validation: C-index = 0.919
+  - Test: C-index = 0.876
+
+Cox_Survival:
+  - Train: C-index = 0.814
+  - Validation: C-index = 0.718
+  - Test: C-index = 0.808
+
+RF_Treatment:
+  - Train: Accuracy = 0.784, AUC = 0.898
+  - Validation: Accuracy = 0.690, AUC = 0.803
+  - Test: Accuracy = 0.914, AUC = 0.919
+
+XGB_Treatment:
+  - Train: Accuracy = 0.936, AUC = 0.994
+  - Validation: Accuracy = 0.759, AUC = 0.855
+  - Test: Accuracy = 0.810, AUC = 0.886
+
+LGB_Treatment:
+  - Train: Accuracy = 0.825, AUC = 0.922
+  - Validation: Accuracy = 0.810, AUC = 0.836
+  - Test: Accuracy = 0.879, AUC = 0.926
+
+🔬 CDSS 호환성:
+- 모든 모델이 CDSS 호환 형태로 래핑됨
+- Holdout 환자 테스트 완료
+- 실시간 치료 효과 예측 가능
+
+🧠 설명 가능 AI (XAI):
+- SHAP 설명기 구현 완료
+- LIME 설명기 구현 완료
+- 특성 중요도 분석 완료
+
+⚖️ 과적합 방지:
+- 균형잡힌 하이퍼파라미터 설정
+- 적절한 정규화 적용
+- Early Stopping 구현
+
+💾 저장된 파일:
+- 모델 파일: cdss_kidney_cancer_treatment_*_model.pkl
+- 전체 파이프라인: cdss_kidney_cancer_treatment_complete_pipeline.pkl
+- 시각화 결과: kidney_cancer_treatment_effect_analysis_results.png
+- XAI 시각화: shap_*.png, lime_*.png
+
+⏰ 분석 완료 시간: 2025-06-20 12:45:11
+================================================================================

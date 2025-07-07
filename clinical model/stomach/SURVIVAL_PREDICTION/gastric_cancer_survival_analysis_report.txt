@@ -1,0 +1,51 @@
+
+================================================================================
+위암 생존 예측 모델 분석 보고서 (CDSS 호환 + XAI)
+================================================================================
+
+📊 데이터 개요:
+- 총 환자 수: 416명
+- 사망 환자: 172명
+- 사망률: 41.3%
+- 중간 추적 기간: 450일
+
+🎯 모델 성능 요약 (C-index):
+
+Cox:
+  - Train: C-index = 0.714
+  - Validation: C-index = 0.766
+  - Test: C-index = 0.686
+
+RSF:
+  - Train: C-index = 0.797
+  - Validation: C-index = 0.736
+  - Test: C-index = 0.712
+
+GBSA:
+  - Train: C-index = 0.798
+  - Validation: C-index = 0.737
+  - Test: C-index = 0.738
+
+Cox_lifelines:
+  - Train: C-index = 0.708
+  - Validation: C-index = 0.708
+  - Test: C-index = 0.708
+
+🔬 CDSS 호환성:
+- 모든 모델이 CDSS 호환 형태로 래핑됨
+- 특정 환자 (TCGA-MX-A5UJ) 홀드아웃 테스트 완료
+- 실시간 생존 예측 가능
+
+🧠 설명 가능 AI (XAI):
+- SHAP 설명기 구현 완료 (또는 Permutation Importance)
+- LIME 설명기 구현 완료
+- 특성 중요도 분석 완료
+
+💾 저장된 파일:
+- 모델 파일: cdss_gastric_cancer_survival_*_model.pkl
+- 전체 파이프라인: cdss_gastric_cancer_survival_complete_pipeline.pkl
+- 시각화 결과: gastric_cancer_survival_analysis_xai_cdss.png
+- XAI 시각화: shap_*.png, lime_*.png
+
+⏰ 분석 완료 시간: 2025-06-22 17:05:00
+================================================================================

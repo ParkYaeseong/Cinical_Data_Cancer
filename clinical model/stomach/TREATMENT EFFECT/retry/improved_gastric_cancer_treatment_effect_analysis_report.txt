@@ -1,0 +1,69 @@
+
+================================================================================
+개선된 위암 치료 효과 예측 모델 분석 보고서 (CDSS 호환 + XAI + 성능 최적화)
+================================================================================
+
+📊 데이터 개요:
+- 총 환자 수: 416명
+- 사망 환자: 172명
+- 사망률: 41.3%
+- 중간 추적 기간: 450일
+- 치료 효과 양호: 269명 (64.7%)
+
+🎯 모델 성능 요약 (개선된 버전):
+
+RSF:
+  - Train: C-index = 0.830
+  - Validation: C-index = 0.619
+  - Test: C-index = 0.703
+
+Cox_Survival:
+  - Train: C-index = 0.781
+  - Validation: C-index = 0.629
+  - Test: C-index = 0.743
+
+RF_Treatment:
+  - Train: Accuracy = 0.755, AUC = 0.845
+  - Validation: Accuracy = 0.651, AUC = 0.628
+  - Test: Accuracy = 0.699, AUC = 0.634
+
+XGB_Treatment:
+  - Train: Accuracy = 0.647, AUC = 0.766
+  - Validation: Accuracy = 0.639, AUC = 0.653
+  - Test: Accuracy = 0.651, AUC = 0.645
+
+LGB_Treatment:
+  - Train: Accuracy = 0.731, AUC = 0.795
+  - Validation: Accuracy = 0.651, AUC = 0.619
+  - Test: Accuracy = 0.699, AUC = 0.624
+
+Ensemble_Treatment:
+  - Train: Accuracy = 0.739, AUC = 0.824
+  - Validation: Accuracy = 0.639, AUC = 0.638
+  - Test: Accuracy = 0.687, AUC = 0.621
+
+🔬 CDSS 호환성:
+- 모든 모델이 CDSS 호환 형태로 래핑됨
+- 특정 환자 (TCGA-MX-A5UJ) 홀드아웃 테스트 완료
+- 실시간 치료 효과 예측 가능
+
+🧠 설명 가능 AI (XAI):
+- SHAP 설명기 구현 완료
+- LIME 설명기 구현 완료
+- 특성 중요도 분석 완료
+
+⚖️ 성능 최적화:
+- 임상적으로 검증된 치료 반응 지표 사용
+- 데이터 균형 조정 (SMOTE + 언더샘플링)
+- 강화된 과적합 방지 (XGBoost 정규화)
+- 앙상블 모델 추가
+- 임상적 특성 엔지니어링
+
+💾 저장된 파일:
+- 모델 파일: improved_cdss_gastric_cancer_treatment_*_model.pkl
+- 전체 파이프라인: improved_cdss_gastric_cancer_treatment_complete_pipeline.pkl
+- 시각화 결과: improved_gastric_cancer_treatment_effect_results.png
+- XAI 시각화: improved_shap_*.png, improved_lime_*.png
+
+⏰ 분석 완료 시간: 2025-06-22 18:09:34
+================================================================================
