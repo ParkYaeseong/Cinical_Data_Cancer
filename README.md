@@ -134,7 +134,7 @@
 
 각 암종 및 예측 과제별 상세 결과는 해당 폴더 내의 `*_report.txt` 파일에 요약되어 있습니다. 보고서에는 모델 성능 지표, 주요 특징의 중요도, 그리고 XAI 분석 결과(SHAP, LIME)가 포함되어 있습니다.
 
-![Kaplan-Meier Curves for Prognostic Models](images/sur.jpg)
+![Kaplan-Meier Curves for Prognostic Models](image/sur.jpg)
 
 ## 9\. 프로젝트 구조 (Project Structure)
 
